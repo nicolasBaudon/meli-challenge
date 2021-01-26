@@ -1,0 +1,44 @@
+// Funcion que recibe esos tres parametros y te arma las lineas de cada uno 
+@mixin font($fontweight: null, $fontsize: null, $lineheight: null) {
+  @if $fontweight != null {
+    font-weight: $fontweight;
+  }
+  @if $fontsize != null {
+    font-size: $fontsize;
+  }
+  @if $lineheight != null {
+    line-height: $lineheight;
+  }
+}
+// Funcion que recibe el tamaño del breakpoint deseado y genera el @media para ese tamaño
+@mixin media($media) {
+  @if $media == xxlg {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }@else if $media == xlg {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == xs {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $media == xxs {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}

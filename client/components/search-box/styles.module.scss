@@ -1,0 +1,42 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  background-color: #ffe600;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    margin-right: 20px;
+    @include media(sm) {
+      width: 45px;
+    }
+  }
+  .search_form {
+    width: 60%;
+    .search_input {
+      width: 90%;
+      color: #333333;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      padding: 10px;
+      @include font(400, 18px, 22px);
+      &::placeholder {
+        color: #999999;
+      }
+      @include media(sm) {
+        @include font(400, 16px, 20px);
+        width: 80%;
+      }
+    }
+    .submit_form_btn {
+      border: none;
+      background-color: #eeeeee;
+      border-radius: 0 5px 5px 0;
+      padding: 10px;
+      @include media(sm) {
+        padding: 8px 10px;
+      }
+    }
+  }
+}
