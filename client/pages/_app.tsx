@@ -1,10 +1,9 @@
+import React from 'react';
+
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-// Components
 import SearchBox from "../components/search-box/search_box";
-
-// Styles
 import "../styles/globals.scss";
 
 const Header = () => {

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import {
   normalizeString,
   unnormalizeString,
-} from "../../utils/services/services";
+} from "../../utils/services/gral_services";
 
 // Styles
 import styles from "./styles.module.scss";

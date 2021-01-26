@@ -1,0 +1,14 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  span {
+    @include font(400, 14px, 18px);
+    color: #999999;
+    &:last-child {
+      @include font(700, 14px, 18px);
+    }
+  }
+  img {
+    margin: 0 10px;
+  }
+}
