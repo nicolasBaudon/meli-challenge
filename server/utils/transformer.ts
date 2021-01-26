@@ -7,22 +7,22 @@ const author = {
   lastname: "Baudon",
 };
 
-const cleanCategories = (categories) => {
+const cleanCategories = (categories: any) => {
   let result = [];
   if (categories) {
     result = categories.values[0].path_from_root.map(
-      (category) => category.name
+      (category: any) => category.name
     );
   }
   return result;
 };
 
-const decimals = (price) => {
+const decimals = (price: number) => {
   const decimals = price.toString().split(".")[1];
   return decimals ? Number(decimals) : 0;
 };
 
-const cleanItem = (item, isDetail = false) => {
+const cleanItem = (item: any, isDetail = false) => {
   const cleanedItem = {
     id: item.id,
     title: item.title,
@@ -42,9 +42,9 @@ const cleanItem = (item, isDetail = false) => {
 
 export const prepareItemsResults = (data: any) => {
   const categories = cleanCategories(
-    data.filters.find((filter) => filter.id === "category")
+    data.filters.find((filter: any) => filter.id === "category")
   );
-  const items = data.results.map((item) => cleanItem(item));
+  const items = data.results.map((item: any) => cleanItem(item));
   return { author, categories, items };
 };
 

@@ -1,6 +1,6 @@
-import * as express from "express";
-import * as cors from "cors";
-import * as bodyParser from "body-parser";
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
 
 import { badEndpoint, errorHandler } from "./middlewares/error-middleware";
 import * as itemsController from "./controllers/items";
