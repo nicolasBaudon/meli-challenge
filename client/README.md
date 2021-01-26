@@ -1,11 +1,13 @@
-## Run App
-
-First, run the development server:
+## Levantar aplicación
 
 ```bash
+npm i
+# o
+yarn
+
 npm run dev
-# or
+# o
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Abrir [http://localhost:3000](http://localhost:3000).
