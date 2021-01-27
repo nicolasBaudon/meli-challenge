@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, createContext } from "react";
 
 import { AppProps } from "next/app";
 import Head from "next/head";
 
 import SearchBox from "../components/search-box/search_box";
+
 import "../styles/globals.scss";
 
 const Header = () => {
@@ -42,11 +43,19 @@ const Header = () => {
 };
 
 const MeliApp = ({ Component, pageProps }: AppProps) => {
+  const [categories, setCategories] = useState([]);
+
+  const newProps = {
+    ...pageProps,
+    setCategories: setCategories,
+    categories: categories,
+  };
+
   return (
     <>
       <Header />
       <SearchBox />
-      <Component {...pageProps} />
+      <Component {...newProps} />
     </>
   );
 };

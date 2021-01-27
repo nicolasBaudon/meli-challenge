@@ -1,13 +1,16 @@
 import { Request, Response } from "express";
 
 import { getItems, getItem } from "../services/items";
-import { prepareItemsResults, prepareItemDetail } from "../utils/transformer";
-import { validId } from "../utils/helpers";
+import {
+  prepareItemsResults,
+  prepareItemDetail,
+} from "../shared/transformers/transformer";
+import { validId } from "../shared/helpers/helpers";
 
 export const getItemsResult = async (req: Request, res: Response) => {
   const query = req.query.q;
   try {
-    const data = await getItems(query);
+    const data = await getItems(query.toString());
     const results = prepareItemsResults(data);
     return res.status(200).json(results);
   } catch (err) {

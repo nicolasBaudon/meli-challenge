@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 
-import { badEndpoint, errorHandler } from "./middlewares/error-middleware";
+import { badEndpoint, errorHandler } from "./shared/middlewares/error-middleware";
 import * as itemsController from "./controllers/items";
 
 const api = express();

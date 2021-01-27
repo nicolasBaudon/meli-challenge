@@ -1,11 +1,12 @@
 @import "../../styles/mixins.scss";
 
-.container {
+.search_box_container {
   background-color: #ffe600;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   .logo {
     margin-right: 20px;
     @include media(sm) {
@@ -13,9 +14,9 @@
     }
   }
   .search_form {
-    width: 60%;
+    width: 61%;
     .search_input {
-      width: 90%;
+      width: 93%;
       color: #333333;
       border: none;
       border-radius: 5px 0 0 5px;
@@ -24,9 +25,14 @@
       &::placeholder {
         color: #999999;
       }
+      @include media(md) {
+        width: 88%;
+      }
       @include media(sm) {
         @include font(400, 16px, 20px);
-        width: 80%;
+      }
+      @include media(xs) {
+        width: 83%;
       }
     }
     .submit_form_btn {
@@ -37,6 +43,12 @@
       @include media(sm) {
         padding: 8px 10px;
       }
+    }
+    @include media(sm) {
+      width: 70%;
+    }
+    @include media(xs) {
+      width: 80%;
     }
   }
 }

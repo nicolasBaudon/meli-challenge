@@ -26,6 +26,7 @@ const cleanItem = (item: any, isDetail = false) => {
   const cleanedItem = {
     id: item.id,
     title: item.title,
+    location: item.address?.city_name,
     price: {
       currency: item.currency_id,
       amount: item.price,

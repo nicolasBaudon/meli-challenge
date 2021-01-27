@@ -1,0 +1,72 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  cursor: pointer;
+  .picture_container {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include media(sm) {
+      width: 120px;
+      height: 120px;
+    }
+    @include media(xs) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .content_container {
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    .info_container {
+      .pay_info_container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        .item_price {
+          @include font(400, 24px, 28px);
+          margin: 0;
+          @include media(sm) {
+            @include font(400, 20px, 24px);
+          }
+          @include media(xs) {
+            @include font(400, 18px, 22px);
+          }
+        }
+        .free_shipping {
+          margin-left: 10px;
+        }
+        @include media(xs) {
+          margin-bottom: 22px;
+        }
+      }
+      .item_title {
+        @include font(400, 18px, 22px);
+        margin: 0;
+        @include media(sm) {
+          @include font(400, 16px, 20px);
+        }
+        @include media(xs) {
+          @include font(400, 14px, 18px);
+        }
+      }
+    }
+    .location_container {
+      text-align: center;
+      .item_location {
+        @include font(400, 12px, 16px);
+        @include media(xs) {
+          @include font(400, 10px, 14px);
+        }
+      }
+    }
+  }
+}

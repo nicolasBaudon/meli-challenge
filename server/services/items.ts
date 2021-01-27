@@ -6,7 +6,7 @@ const axiosApiInstance = axios.create({
   baseURL: config.API_URL,
 });
 
-export const getItems = async (query: any) => {
+export const getItems = async (query: string) => {
   const results = await axiosApiInstance.get(
     `/sites/MLA/search?q=${query}&limit=4`
   );

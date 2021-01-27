@@ -1,0 +1,109 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  .prod_container {
+    display: flex;
+    .item_picture {
+      width: 680px;
+      @include media(md) {
+        width: 100%;
+      }
+    }
+    .item_info {
+      @include font(400, 14px, 18px);
+      margin-bottom: 16px;
+    }
+    .item_title {
+      @include font(700, 24px, 34px);
+      margin-bottom: 32px;
+    }
+    .item_price {
+      @include font(400, 46px, 50px);
+      margin-bottom: 32px;
+      display: flex;
+      .price_decimals {
+        @include font(400, 20px, 24px);
+        margin: 5px;
+      }
+    }
+    .buy_btn {
+      background-color: #3483fa;
+      border: none;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+    }
+    @include media(md) {
+      flex-direction: column;
+    }
+  }
+  .description_container {
+    .description_title {
+      @include font(400, 28px, 32px);
+      margin: 32px 0;
+    }
+    .item_description {
+      @include font(400, 16px, 20px);
+      color: #999999;
+      margin-bottom: 32px;
+    }
+  }
+}
+@include media(sm) {
+  .container {
+    .prod_container {
+      .item_info {
+        margin-top: 16px;
+      }
+      .item_title {
+        @include font(700, 20px, 30px);
+      }
+      .item_price {
+        @include font(400, 40px, 44px);
+        .price_decimals {
+          @include font(400, 18px, 22px);
+        }
+      }
+    }
+    .description_container {
+      .description_title {
+        @include font(400, 24px, 28px);
+      }
+      .item_description {
+        @include font(400, 16px, 20px);
+      }
+    }
+  }
+}
+@include media(xs) {
+  .container {
+    .prod_container {
+      .item_info {
+        @include font(400, 12px, 16px);
+      }
+      .item_title {
+        margin-bottom: 16px;
+      }
+      .item_price {
+        @include font(400, 30px, 34px);
+        margin-bottom: 16px;
+        .price_decimals {
+          @include font(400, 16px, 20px);
+        }
+      }
+    }
+    .description_container {
+      .description_title {
+        @include font(400, 20px, 24px);
+      }
+      .item_description {
+        @include font(400, 14px, 18px);
+      }
+    }
+  }
+}

@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { useRouter } from "next/router";
 
-const ItemDetail = () => {
+import Loader from "../../../components/loader/loader";
+import BreadCrumb from "../../../components/breadcrumb/breadcrumb";
+import Detail from "../../../components/detail/detail";
+import { getItemDetail } from "../../../utils/services/item_service";
+
+import styles from "./styles.module.scss";
+
+const ItemDetail = ({ categories }: { categories: any }) => {
   const router = useRouter();
   const { id } = router.query;
+  const [item, setItem] = useState<any | null>(null);
 
-  return <div>{id}</div>;
+  useEffect(() => {
+    if (!!id) {
+      getItemDetail(id).then((result) => setItem(result));
+    }
+  }, [id]);
+
+  return item ? (
+    <div className={styles.container}>
+      <div className={styles.sub_container}>
+        <BreadCrumb categories={categories} />
+      </div>
+      <div className={styles.sub_container}>
+        <Detail item={item.item} />
+      </div>
+    </div>
+  ) : (
+    <Loader />
+  );
 };
 
 export default ItemDetail;
