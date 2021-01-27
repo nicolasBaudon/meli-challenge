@@ -1,6 +1,8 @@
+@import "../../styles/variables.scss";
+
 .container {
   background-color: #ffffff;
-  padding: 16px;
+  padding: $small-space;
   border-radius: 2px;
-  margin-bottom: 16px;
+  margin-bottom: $small-space;
 }

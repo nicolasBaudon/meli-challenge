@@ -1,13 +1,14 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .container {
   width: 100%;
   .category_name {
     @include font(400, 14px, 18px);
-    color: #999999;
+    color: $grey-2;
     &:last-child {
       @include font(700, 14px, 18px);
-      color: #666666;
+      color: $grey-3;
     }
     @include media(sm) {
       @include font(400, 13px, 18px);

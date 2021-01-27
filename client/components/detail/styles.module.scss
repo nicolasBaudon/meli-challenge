@@ -1,10 +1,11 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .container {
   background-color: #ffffff;
-  padding: 32px;
+  padding: $big-space;
   border-radius: 2px;
-  margin-bottom: 16px;
+  margin-bottom: $small-space;
   .prod_container {
     display: flex;
     .item_picture {
@@ -15,15 +16,15 @@
     }
     .item_info {
       @include font(400, 14px, 18px);
-      margin-bottom: 16px;
+      margin-bottom: $small-space;
     }
     .item_title {
       @include font(700, 24px, 34px);
-      margin-bottom: 32px;
+      margin-bottom: $big-space;
     }
     .item_price {
       @include font(400, 46px, 50px);
-      margin-bottom: 32px;
+      margin-bottom: $big-space;
       display: flex;
       .price_decimals {
         @include font(400, 20px, 24px);
@@ -31,7 +32,7 @@
       }
     }
     .buy_btn {
-      background-color: #3483fa;
+      background-color: $blue;
       border: none;
       color: #ffffff;
       border-radius: 5px;
@@ -45,12 +46,12 @@
   .description_container {
     .description_title {
       @include font(400, 28px, 32px);
-      margin: 32px 0;
+      margin: $big-space 0;
     }
     .item_description {
       @include font(400, 16px, 20px);
-      color: #999999;
-      margin-bottom: 32px;
+      color: $grey-2;
+      margin-bottom: $big-space;
     }
   }
 }
@@ -58,7 +59,7 @@
   .container {
     .prod_container {
       .item_info {
-        margin-top: 16px;
+        margin-top: $small-space;
       }
       .item_title {
         @include font(700, 20px, 30px);
@@ -87,11 +88,11 @@
         @include font(400, 12px, 16px);
       }
       .item_title {
-        margin-bottom: 16px;
+        margin-bottom: $small-space;
       }
       .item_price {
         @include font(400, 30px, 34px);
-        margin-bottom: 16px;
+        margin-bottom: $small-space;
         .price_decimals {
           @include font(400, 16px, 20px);
         }

@@ -1,10 +1,11 @@
 @import "../../styles/mixins.scss";
+@import "../../styles//variables.scss";
 
 .container {
   width: 100%;
   .sub_container {
     width: 65%;
-    margin: 16px auto 0 auto;
+    margin: $small-space auto 0 auto;
     @include media(sm) {
       width: 80%;
     }

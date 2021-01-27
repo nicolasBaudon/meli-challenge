@@ -1,54 +1,83 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .search_box_container {
-  background-color: #ffe600;
+  background-color: $yellow;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  .logo {
-    margin-right: 20px;
-    @include media(sm) {
-      width: 45px;
-    }
-  }
-  .search_form {
-    width: 61%;
-    .search_input {
-      width: 93%;
-      color: #333333;
-      border: none;
-      border-radius: 5px 0 0 5px;
-      padding: 10px;
-      @include font(400, 18px, 22px);
-      &::placeholder {
-        color: #999999;
+  .inner_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    .logo_container {
+      width: 10%;
+      text-align: left;
+      .logo {
+        cursor: pointer;
+        @include media(sm) {
+          width: 45px;
+        }
       }
       @include media(md) {
-        width: 88%;
-      }
-      @include media(sm) {
-        @include font(400, 16px, 20px);
+        width: 15%;
       }
       @include media(xs) {
-        width: 83%;
+        width: 18%;
       }
     }
-    .submit_form_btn {
-      border: none;
-      background-color: #eeeeee;
-      border-radius: 0 5px 5px 0;
-      padding: 10px;
-      @include media(sm) {
-        padding: 8px 10px;
+    .search_form {
+      width: 90%;
+      text-align: right;
+      .search_input {
+        width: 93%;
+        color: $grey-4;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        padding: 10px;
+        @include font(400, 18px, 22px);
+        &::placeholder {
+          color: $grey-2;
+        }
+        @include media(md) {
+          width: 90%;
+        }
+        @include media(sm) {
+          @include font(400, 16px, 20px);
+        }
+        @include media(xs) {
+          width: 85%;
+        }
+      }
+      .submit_form_btn {
+        width: 7%;
+        border: none;
+        background-color: $grey-1;
+        border-radius: 0 5px 5px 0;
+        padding: 10px;
+        @include media(md) {
+          width: 10%;
+        }
+        @include media(sm) {
+          padding: 8px 10px;
+        }
+        @include media(xs) {
+          width: 15%;
+        }
+      }
+      @include media(md) {
+        width: 85%;
+      }
+      @include media(xs) {
+        width: 82%;
       }
     }
     @include media(sm) {
-      width: 70%;
+      width: 80%;
     }
     @include media(xs) {
-      width: 80%;
+      width: 95%;
     }
   }
 }

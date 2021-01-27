@@ -1,0 +1,20 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  background-color: #ffffff;
+  padding: $big-space;
+  border-radius: 2px;
+  margin-bottom: $small-space;
+  text-align: center;
+  .error_message {
+    @include font(700, 16px, 20px);
+    display: block;
+    margin-top: $big-space;
+  }
+  .error_illustration {
+    @include media(xs) {
+      width: 150px;
+    }
+  }
+}

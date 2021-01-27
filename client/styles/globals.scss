@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import "../styles/variables.scss";
 
 html,
 body {
@@ -7,7 +8,8 @@ body {
   font-family: "Proxima Nova", -apple-system, "Roboto", BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
-  background-color: #eeeeee;
+  background-color: $grey-1;
+  color: $grey-4;
 }
 
 a {
