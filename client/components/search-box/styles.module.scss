@@ -13,7 +13,7 @@
     margin: auto;
     .logo_container {
       width: 10%;
-      text-align: center;
+      text-align: left;
       .logo {
         cursor: pointer;
         @include media(sm) {

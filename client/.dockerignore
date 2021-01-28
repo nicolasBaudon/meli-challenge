@@ -1,0 +1,8 @@
+node_modules
+.next
+README.md
+*.log
+.vscode
+.dockerignore
+Dockerfile
+nginx/
