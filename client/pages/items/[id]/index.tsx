@@ -43,7 +43,7 @@ const ItemDetail = ({ categories }: { categories: string[] }) => {
   ) : (
     <div className={styles.container}>
       <div className={styles.sub_container}>
-        <Error />
+        <Error text="Hubo un error. ¡Intentá nuevamente!" />
       </div>
     </div>
   );

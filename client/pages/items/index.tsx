@@ -39,21 +39,29 @@ const ItemsResults = ({
     }
   }, [router.query]);
 
-  return !!items ? (
-    <div className={styles.container}>
-      <div className={styles.sub_container}>
-        <BreadCrumb categories={categories} />
+  return items ? (
+    items.length ? (
+      <div className={styles.container}>
+        <div className={styles.sub_container}>
+          <BreadCrumb categories={categories} />
+        </div>
+        <div className={styles.sub_container}>
+          <SearchResults items={items} />
+        </div>
       </div>
-      <div className={styles.sub_container}>
-        <SearchResults items={items} />
+    ) : (
+      <div className={styles.container}>
+        <div className={styles.sub_container}>
+          <Error text="No hay resultados para la búsqueda realizada. ¡Intentá nuevamente!" />
+        </div>
       </div>
-    </div>
+    )
   ) : !error ? (
     <Loader />
   ) : (
     <div className={styles.container}>
       <div className={styles.sub_container}>
-        <Error />
+        <Error text="Hubo un error. ¡Intentá nuevamente!" />
       </div>
     </div>
   );
