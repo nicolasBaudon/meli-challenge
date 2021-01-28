@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 import { formatItemPrice } from "../../utils/services/gral_services";
+import { IItem } from "../../utils/interfaces";
 
 import styles from "./styles.module.scss";
 
-const Item = ({ item }: { item: any }) => {
+const Item = ({ item }: { item: IItem }) => {
   return (
     <Link href="/items/[id]" as={`/items/${item.id}`}>
       <div className={styles.container}>

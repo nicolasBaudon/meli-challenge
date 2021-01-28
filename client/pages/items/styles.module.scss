@@ -4,13 +4,13 @@
 .container {
   width: 100%;
   .sub_container {
-    width: 65%;
+    width: 80%;
     margin: $small-space auto 0 auto;
     @include media(sm) {
-      width: 80%;
+      width: 90%;
     }
     @include media(xs) {
-      width: 95%;
+      width: 98%;
     }
   }
 }

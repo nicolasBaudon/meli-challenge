@@ -1,8 +1,9 @@
 import { formatItemPrice } from "../../utils/services/gral_services";
+import { IItem } from "../../utils/interfaces";
 
 import styles from "./styles.module.scss";
 
-const ItemDetail = ({ item }: { item: any }) => {
+const ItemDetail = ({ item }: { item: IItem }) => {
   return (
     <div className={styles.container}>
       <div className={styles.prod_container}>

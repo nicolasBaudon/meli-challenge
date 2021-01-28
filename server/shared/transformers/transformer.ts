@@ -32,7 +32,10 @@ const cleanItem = (item: any, isDetail = false) => {
       amount: item.price,
       decimals: decimals(item.price),
     },
-    picture: item.thumbnail,
+    picture:
+      item.pictures && item.pictures.length
+        ? item.pictures[0].url
+        : item.thumbnail,
     condition: item.condition,
     free_shipping: item.shipping.free_shipping,
     sold_quantity: isDetail ? item.sold_quantity : undefined,

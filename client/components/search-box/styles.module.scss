@@ -9,11 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%;
+    width: 80%;
     margin: auto;
     .logo_container {
       width: 10%;
-      text-align: left;
+      text-align: center;
       .logo {
         cursor: pointer;
         @include media(sm) {
@@ -74,10 +74,10 @@
       }
     }
     @include media(sm) {
-      width: 80%;
+      width: 90%;
     }
     @include media(xs) {
-      width: 95%;
+      width: 98%;
     }
   }
 }

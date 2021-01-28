@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-const Breadcrumb = ({ categories }: { categories: any }) => {
+const Breadcrumb = ({ categories }: { categories: string[] }) => {
   return (
     <div className={styles.container}>
       {categories?.map((category, key) => (

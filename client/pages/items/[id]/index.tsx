@@ -7,20 +7,21 @@ import BreadCrumb from "../../../components/breadcrumb/breadcrumb";
 import Detail from "../../../components/detail/detail";
 import Error from "../../../components/error-message/error_message";
 import { getItemDetail } from "../../../utils/services/item_service";
+import { IItem } from "../../../utils/interfaces";
 
 import styles from "./styles.module.scss";
 
-const ItemDetail = ({ categories }: { categories: any }) => {
+const ItemDetail = ({ categories }: { categories: string[] }) => {
   const router = useRouter();
   const { id } = router.query;
-  const [item, setItem] = useState<any | null>(null);
+  const [item, setItem] = useState<IItem | null>(null);
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     if (!!id) {
       getItemDetail(id).then((result) => {
         if (result.success) {
-          setItem(result.data);
+          setItem(result.data.item);
         } else {
           setError(true);
         }
@@ -34,7 +35,7 @@ const ItemDetail = ({ categories }: { categories: any }) => {
         <BreadCrumb categories={categories} />
       </div>
       <div className={styles.sub_container}>
-        <Detail item={item.item} />
+        <Detail item={item} />
       </div>
     </div>
   ) : !error ? (

@@ -10,8 +10,10 @@
     display: flex;
     .item_picture {
       width: 680px;
+      margin-right: $small-space;
       @include media(md) {
         width: 100%;
+        margin: 0;
       }
     }
     .item_info {

@@ -43,7 +43,7 @@ const Header = () => {
 };
 
 const MeliApp = ({ Component, pageProps }: AppProps) => {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<string[]>([]);
 
   const newProps = {
     ...pageProps,
